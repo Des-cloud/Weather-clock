@@ -1,16 +1,17 @@
 
 /* Global selectors */
-  body{
+body{
     background-color:	#66A182;
     color: #2E4057;
   }
 
   header{
-    margin: auto 40% 100px;
+    margin: auto;
+    margin-bottom: 80px;
   }
 
   .num {
-    font-size: 1.5rem;
+    font-size: 16px;
     position: absolute;
     font-weight: bold;
     z-index: 3;
@@ -21,20 +22,20 @@
 /* Clock selectors */
 .clock {
   position: relative;
-  height: 350px;
-  width: 350px;
+  height: 250px;
+  width: 250px;
   background-color: #CAFFB9;
-  border: solid 15px #000;
+  border: solid 8px #000;
   border-radius: 50%;
   box-shadow: 0 2vw 4vw -1vw black;
   z-index: 1;
-  margin: 0 40%;
+  margin: auto;
 }
 
 .dot {
   position: absolute;
-  height: 14px;
-  width: 14px;
+  height: 10px;
+  width: 10px;
   background-color: #000;
   left: 0;
   top: 0;
@@ -52,47 +53,47 @@
   font-weight: bold;
   border-radius: 25%;
   left: 50%;
-  font-size: 16px;
+  font-size: 12px;
   text-align: center;
-  width: 120px;
-  margin-left: -50px;
+  width: 87px;
+  margin-left: -43px;
   z-index: 2;
   font-family: 'Poiret One', cursive;
 }
 
 .date {
-  top: 80px;
-  padding: 5px;
+  top: 57px;
+  padding: 3px;
 }
 
 .day{
-  bottom: 80px;
-  padding: 5px;
-  font-size: 20px;
+  bottom: 57px;
+  padding: 3px;
+  font-size: 15px;
 }
 
 .hr12 {
   left: 50%;
-  top: 30px;
-  margin-left: -15px;
+  top: 21px;
+  margin-left: -8px;
 }
 
 .hr6 {
   left: 50%;
-  bottom: 30px;
-  margin-left: -8px;
+  bottom: 21px;
+  margin-left: -5px;
 }
 
 .hr9 {
   top: 50%;
-  left: 30px;
-  margin-top: -20px;
+  left: 21px;
+  margin-top: -12px;
 }
 
 .hr3 {
   top: 50%;
-  right: 30px;
-  margin-top: -20px;
+  right: 21px;
+  margin-top: -12px;
 }
 
 .hands {
@@ -100,29 +101,29 @@
   display: inline-block;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
-  width: 5px;
+  width: 3px;
   transform-origin: 50% 100%;
   bottom: 50%;
   left: 50%;
-  margin-left: -3px;
+  margin-left: -2px;
   opacity: 0.7;
 }
 
 .hour-hand {
-  height: 70px;
-  background-color: #66A182;
+  height: 50px;
+  background-color: #000;
   z-index: 4;
 }
 
 .min-hand {
-  height: 90px;
-  background-color: #2E4057;
+  height: 65px;
+  background-color: #000;
   z-index: 5;
 }
 
 .sec-hand {
-  height: 100px;
-  background-color: #2E4057;
+  height: 79px;
+  background-color: #66A182;
   z-index: 6;
 }
 
@@ -131,10 +132,10 @@
   left: 50%;
   margin-left: -2px;
   width: 2px;
-  height: 15px;
+  height: 11px;
   z-index: 2;
   background-color: #000;
-  transform-origin: 50% 160px;
+  transform-origin: 50% 115px;
 }
 
 .diallines:nth-child(5n+1) {
@@ -142,20 +143,21 @@
   left: 50%;
   margin-left: -2px;
   width: 4px;
-  height: 25px;
+  height: 18px;
   z-index: 2;
   background-color: #000;
-  transform-origin: 50% 160px;
+  transform-origin: 50% 115px;
 }
 
 
 /* Weather selectors */
 .weather {
   text-align: center;
-  font-size: 30px;
+  font-size: 22px;
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
-  margin: 100px 0 150px;
+  margin: auto;
+  margin-top: 72px;
 }
 
 
@@ -163,7 +165,7 @@
 h1{
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
-  font-size: 70px;
+  font-size: 50px;
   margin: 50px 0;
 }
 
@@ -171,12 +173,26 @@ h1{
 /* Digital clock selectors */
 .digital {
   font-family: 'Orbitron', sans-serif;
-  font-size: 40px;
+  font-size: 28px;
   text-shadow: 1px 4px 2px grey;
 }
 
-.time {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 30px;
-  text-shadow: 1px 4px 2px grey;
-}
+ 
+/* Media query to change sizes for very small screens */
+@media screen and (max-width: 400px) {
+
+  .header {
+    margin-bottom: 40px;
+  }
+
+  .weather {
+    font-size: 22px;
+    margin-top: 50px;
+  }
+
+  h1 {
+      margin: auto;
+      margin-bottom: 20px;
+  }
+
+} 
